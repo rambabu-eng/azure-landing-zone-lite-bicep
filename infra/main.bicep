@@ -17,3 +17,4 @@ module bastion './modules/bastion.bicep' = {
   }
 }
 
+
