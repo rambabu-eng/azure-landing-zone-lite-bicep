@@ -1,0 +1,16 @@
+param location string
+
+resource allowedLocations 'Microsoft.Authorization/policyAssignments@2022-06-01' = {
+  name: 'allow-only-au-east'
+  properties: {
+    displayName: 'Allow only Australia East'
+    policyDefinitionId: '/providers/Microsoft.Authorization/policyDefinitions/e56962a6-4747-49cd-b67b-bf8b01975c4c'
+    parameters: {
+      listOfAllowedLocations: {
+        value: [
+          location
+        ]
+      }
+    }
+  }
+}

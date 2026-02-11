@@ -35,5 +35,11 @@ module monitoring './modules/monitoring.bicep' = {
     prefix: prefix
   }
 }
+module policy './modules/policy.bicep' = {
+  name: 'policy'
+  params: {
+    location: location
+  }
+}
 
 
