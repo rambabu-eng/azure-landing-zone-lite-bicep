@@ -28,5 +28,12 @@ module vm './modules/vm.bicep' = {
     adminPassword: adminPassword
   }
 }
+module monitoring './modules/monitoring.bicep' = {
+  name: 'monitoring'
+  params: {
+    location: location
+    prefix: prefix
+  }
+}
 
 
