@@ -16,5 +16,17 @@ module bastion './modules/bastion.bicep' = {
     hubVnetName: '${prefix}-hub-vnet'
   }
 }
+@secure()
+param adminPassword string
+
+module vm './modules/vm.bicep' = {
+  name: 'vm'
+  params: {
+    location: location
+    prefix: prefix
+    spokeVnetName: '${prefix}-spoke-vnet'
+    adminPassword: adminPassword
+  }
+}
 
 
