@@ -1,4 +1,5 @@
 Azure Secure Landing Zone (Lite) — Bicep IaC Project
+
 📌 Overview
 
 This project implements a secure Azure Landing Zone (Lite) using modular Bicep Infrastructure as Code. It demonstrates platform-level design with secure networking, controlled access, monitoring, governance guardrails, and cost control — deployed through repeatable IaC modules.
